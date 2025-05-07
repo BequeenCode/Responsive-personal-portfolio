@@ -3,18 +3,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
-    border: none;
-    outline: none;
-    scroll-behavior: smooth;
-    font-family: -apple-system,  sans-serif;
-}
 
-:root{
-    --bg-color:#fff;
-    --snd-bg-color:#d5fdf9;
-    --text-color:#000;
-    --main-color:#f865e7;
+    font-family: -apple-system,  sans-serif;
     
 
 }
@@ -23,9 +13,24 @@ html{
     overflow-x:hidden ;
 }
 body{
-    background: var(--bg-color);
-    color:var(--text-color) ;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background:linear-gradient(to right,rgb(255,255,255),rgb(254,215,173))
 
+}
+.nav{
+    width: 100%;
+    height: 10vh;
+    position: sticky;
+}
+.nav-container{
+    width:100%;
+    height:100px;
+    display: flex;
+    justify-content:space-around ;
+    align-items: center;
+    
 }
 section{
     min-height: 100vh;
@@ -46,23 +51,28 @@ section{
    background-filter: blur(10px);
    backdrop-filter: blur(10px);
    transition:all 0.5s ease;
-
+ 
 }
 .logo{
     font-size: 3rem;
-    color:var(--bg-color);
-    font-weight: 700;
+    color: #000;
+    font-weight: bolder;
     cursor: pointer;
     transition: 0.3s ease;
+    font-size: 2rem;
 
 
+}
+.logo span{
+    color: rgb(109,67,0); 
+    text-shadow: 0 0 10px rgb(109, 67, 0);
 }
 .logo:hover{
     transform: scale(1.05);
 }
 .navbar a {
     font-size: 1.9rem;
-    color: var(--bg-color);
+    color: rgb(109,67,0);
     margin-left: 4rem;
     font-weight: 700;
     transition: 0.3s ease;
@@ -75,7 +85,7 @@ section{
 
 #menu-icon{
     font-size: 3.6rem;
-    color: var(--bg-color);
+    color: rgb(109,67,0);
     cursor: pointer;
     display: none;
 }
@@ -86,11 +96,13 @@ section{
     display: flex ;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    height: 100vh;
 }
 .home-img img{
     width: 20vw;
     border-radius: 50%;
-    box-shadow: 0 0 25px var(--main-color);
+    box-shadow: rgb(109,67,0);
     cursor: pointer;
     animation: flootImage 4s ease-in-out infinite;
     transition: 0.4s ease ;
@@ -99,17 +111,15 @@ section{
 
 }
 .home-img img:hover{
-    box-shadow: 0 0 25px var(--main-color),
-                0 0 35px var(--main-color),
-                0 0 45px var(--main-color)
+    box-shadow: rgb(109,67,);
      
 }
 .hello{
     width:fit-content;
     padding: 4px;
     border-radius: 9px;
-    background-color: #f865e7;
-    color: white;
+    
+    color:  rgb(109,67,0);
 }
 @keyframes flootImage{
     0%{
@@ -139,7 +149,7 @@ section{
 
 }
 span{
-    color:var(--main-color);
+    color:rgb(109,67,0); 
 
 
 }
@@ -191,5 +201,13 @@ span{
 
 }
 .btn:hover{
-    box-shadow: 0 0 1.6rem var(--main-color);
+    box-shadow: 0 0 1.6rem var(--snd-bg-color);
 }
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background: var(--snd-bg-color );
+}
+
