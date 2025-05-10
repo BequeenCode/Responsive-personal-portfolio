@@ -39,7 +39,7 @@ section{
 /*Header section code*/
 .header{
    position: fixed; 
-   width: 100%;
+   width: 1000%;
    top:0;
    right: 0;
     z-index:1000 ;
